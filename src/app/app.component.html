@@ -1,3 +1,7 @@
 <div class="sildeshow-container">
-  <img class="img-slideshow" src="assets/imgs/{{ images[currentImage] }}" />
+  <img
+    *ngIf="showImage"
+    class="img-slideshow"
+    src="assets/imgs/{{ images[currentImage] }}"
+  />
 </div>
