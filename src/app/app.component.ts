@@ -3,27 +3,31 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-   images = ['code.jpg', 'laptop.jpg', 'universty.jpg'];
-   currentImage = 0;
-   showImage = true;
+  images = ['code.jpg', 'laptop.jpg', 'universty.jpg'];
+  headlines = [
+    'Bringing engineering to next level',
+    'Born to code',
+    'Graduated at Developer Akademie',
+  ];
+  currentImage = 0;
+  showImage = true;
 
-   ngOnInit(){
+  ngOnInit() {
     this.updateImage();
-   }
+  }
 
-   updateImage(){
+  updateImage() {
     setInterval(() => {
-      this.currentImage ++;
+      this.currentImage++;
       this.currentImage = this.currentImage % this.images.length;
       this.showImage = false;
-
 
       setTimeout(() => {
         this.showImage = true;
       }, 10);
     }, 8000);
-   }
+  }
 }
