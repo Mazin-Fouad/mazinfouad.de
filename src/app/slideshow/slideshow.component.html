@@ -1,0 +1,11 @@
+<div class="sildeshow-container">
+  <img
+    *ngIf="showImage"
+    class="img-slideshow"
+    src="assets/imgs/{{ images[currentImage] }}"
+  />
+</div>
+
+<div class="sildeshow-container sildeshow-overlay">
+  <p *ngIf="showImage" class="fadeIn">{{ headlines[currentImage] }}</p>
+</div>
