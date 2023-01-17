@@ -11,7 +11,14 @@ header {
     align-items: center;
 
     img {
+        cursor: pointer;
         height: 90px;
+        transition: all 225ms ease-in-out;
+
+        &:hover {
+            transform: scale(1.1);
+            transition: all 225ms ease-in-out;
+        }
     }
 
     nav a {
@@ -22,7 +29,22 @@ header {
 
         &:hover {
             color: rgba(250, 250, 250, 0.8);
-            transition: all 225ms ease-in-out;
+            transition: all 400ms ease-in-out;
         }
     }
+}
+
+.darkLinks {
+    a {
+        color: #000 !important;
+
+        &:hover {
+            color: rgba(0, 0, 0, 0.8) !important;
+        }
+    }
+}
+
+.darkHeader {
+    background-color: #fff;
+    box-shadow: 0px 1px 3px 0px rgba($color: #000000, $alpha: 0.2);
 }
